@@ -10,55 +10,46 @@
 
 <body>
     <%- include('../layout') %>
-    <div class="container py-2">
-        <h2 style="text-align: center;">
-            <%= title %>
-        </h2>
-        <form action="">
-            <div class="form-group">
-                <label>ชื่อบทความ</label>
-                <input type="text" name="name" class="form-control" id="">
-            </div>
-            <div class="form-group">
-                <label>ชื่อผู้เขียน</label>
-                <input type="text" name="author" class="form-control" id="">
-            </div>
+        <div class="container py-2">
+            <h2 style="text-align: center;">
+                <%= title %>
+            </h2>
+            <form action="/blogs/add" method="POST">
+                <div class="form-group">
+                    <label>ชื่อบทความ</label>
+                    <input type="text" name="title" class="form-control" id="">
+                </div>
+                <div class="form-group">
+                    <label>ชื่อผู้เขียน</label>
+                    <input type="text" name="author" class="form-control" id="">
+                </div>
 
-            <div class="form-group">
-                <label>หมวดหมู่</label>
-                <select name="category" class="form-control" id="">
+                <div class="form-group">
+                    <label>หมวดหมู่</label>
+                    <select name="category" class="form-control" id="">
                     <option value="นิยาย">นิยาย</option>
                     <option value="หนัง">หนัง</option>
                     <option value="สารคดี">สารคดี</option>
                     </select>
-            </div>
+                </div>
 
-            <div class="form-group">
-                <label>เนื้อหาบทความ</label>
-                <textarea name="content" class="form-control" id="editor1" rows="12" cols="500"></textarea>
-            </div>
-            <div id="editor" name="content1">
-                <p>Hello World!</p>
-                <p>Some initial <strong>bold</strong> text</p>
-                <p><br></p>
-              </div>
+                <div class="form-group">
+                    <label>เนื้อหาบทความ</label>
+                    <textarea name="content" class="form-control" id="editor1" rows="12" cols="500"></textarea>
+                </div>
 
 
-            <input type="submit" class="btn btn-success form-control" name="" id="" value="บันทึก">
-        </form>
-    </div>
-    <div class="" style="text-align: center;">
-        <a href="/" class="btn btn-primary">
+                <input type="submit" class="btn btn-success form-control" name="" id="" value="บันทึก">
+            </form>
+        </div>
+        <div class="" style="text-align: center;">
+            <a href="/" class="btn btn-primary">
            กลับหน้าแรก
         </a>
 
-    </div>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script>
-        var quill = new Quill('#editor', {
-          theme: 'snow'
-        });
-      </script>
+        </div>
+
+
 </body>
 
 </html>
